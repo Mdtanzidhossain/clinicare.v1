@@ -220,7 +220,7 @@
 
 
 
-  
+
 
 <!-- registration backend php  -->
 
@@ -288,3 +288,115 @@
                 ?>
 
 
+
+ </div>
+          </div>
+        </div>
+
+
+
+
+
+
+<!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_menu">
+            <h5>
+              QUICK LINKS
+            </h5>
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="cover.php">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service"> Services </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#login"> User login </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_course">
+            <h5>
+              Clinicare
+            </h5>
+            <p>
+              Your one stop medical solution along with medicine purchase and ambulance care service.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-5 offset-md-1">
+          <div class="info_news">
+            <h5>
+              FOR ANY QUERY, PLEASE WRITE TO US
+            </h5>
+            <div class="info_contact">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> Location
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i> Clinicare@gmail.com
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i> Call : +880 1959-608444
+              </a>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Enter Your email" />
+              <button>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+    <!-- whats app chat start-->
+
+    <style>
+      .whatsapp_float{
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        text-align: right;
+      }
+    </style>
+    <div class="whatsapp_float">
+      
+        <a href="https://wa.me/+8801521581815" target="_blank"><img src="Coverimg/whatsapp.png" width="50px" class="whatsapp_float_btn"></a>
+
+    </div>
+
+  <!-- whats app chat end-->
+        <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">@developers(TM)-Tanzid.Ridwan.Shaon.Omi</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
