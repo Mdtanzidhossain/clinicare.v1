@@ -400,3 +400,42 @@
     </div>
   </div>
 </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  
+ function myfun(data){
+
+   //alert (data);
+   var req = new XMLHttpRequest();
+   req.open("GET","http://localhost/clinicare/response.php?datavalue="+data,true);
+   req.send();
+   req.onreadystatechange=function(){
+    if(req.readyState==4 && req.status==200){
+      document.getElementById("city").innerHTML = req.responseText;
+    }
+   };
+ }
+
+
+</script>
+
+
+
+
+<?php 
+ob_end_flush();
+?>
+
+
+
+
+
+
+</body>
+
+
+</html>
