@@ -222,6 +222,69 @@
 
   
 
+<!-- registration backend php  -->
 
+
+                <?php
+
+                  if(isset($_POST['register'])){
+
+                      $username        = mysqli_real_escape_string ($db,$_POST['email']);
+                      $Firstname       = mysqli_real_escape_string ($db,$_POST['Firstname']);
+                      $Lastname        = mysqli_real_escape_string ($db,$_POST['Lastname']);
+                      $DOB             = mysqli_real_escape_string ($db,$_POST['DOB']);
+                      $Phone           = mysqli_real_escape_string ($db,$_POST['Phone']);
+                      $NID             = mysqli_real_escape_string ($db,$_POST['NID']);
+
+                      
+                      $District        = mysqli_real_escape_string ($db,$_POST['District']);
+                      $Postalcode      = mysqli_real_escape_string ($db,$_POST['Postalcode']);
+                      $StreetAddress   = mysqli_real_escape_string ($db,$_POST['StreetAddress']);
+                      $Houseno         = mysqli_real_escape_string ($db,$_POST['Houseno']);
+                      $Divisionid      = mysqli_real_escape_string ($db,$_POST['Divisionid']);
+                      
+
+
+
+                      $password        = mysqli_real_escape_string ($db,$_POST['password']);
+                      $confirmpassword = mysqli_real_escape_string ($db,$_POST['confirmpassword']);
+
+                      if($password == $confirmpassword)
+                      {
+
+                        //$hassPass = sha1($password);
+
+                      $regQuery = "INSERT INTO patient (first_name,DOB,last_name,phone,email,NID_Birth_certific,pasword) VALUES ('$Firstname','$DOB','$Lastname','$Phone','$username','$NID','$password')";
+
+                      $locQuery ="INSERT INTO location (district,postalCode,street_Address,house_no,division_id) VALUES ('$District','$Postalcode','$StreetAddress','$Houseno','$Divisionid')";
+
+                     //$divQuery ="INSERT INTO division (name,division_id) VALUES ('$District','$Divisionid')";
+
+
+                      $regresult = mysqli_query($db, $regQuery);
+                      $locresult = mysqli_query($db,$locQuery);
+                      //$divresult = mysqli_query($db,$divQuery);
+
+                          if($regresult && $locresult)
+                          {
+
+                            header('location: cover.php');
+
+                          } else{
+
+                            die("reg error" .mysqli_error($db));
+                          }
+
+                      }
+
+                      else{
+
+                          echo '<span class="alert alert-danger">password wrong</span>';
+
+                      }
+ 
+                  }
+
+                ?>
 
 
