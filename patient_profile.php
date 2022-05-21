@@ -374,3 +374,188 @@ h6 {
 
 </head>
 
+<body>
+
+
+<!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            
+              <h3>clini<span id="ccolor">c</span>are</h3>
+            
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="cover.php">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cover.php#about"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cover.php#service"> Services </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cover.php#login"> login </a>
+              </li>
+            </ul>
+            <form class="form-inline ">
+              <button class="btn nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-12 col-md-12">
+                <div class="">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                                   <h2 class="f-w-600">
+                                    <?php 
+                                     echo $_SESSION['first_name'];
+                                    ?>
+                                     </h2>
+                                <p>Patient</p> 
+                                <a href="appoinment_page.php"><button class="patientbtn">Book appoinment</button></a>
+                                <a href="cover.php#service"><button class="patientbtn">Buy medicine</button></a>
+                                <a href="ambulance/account.php"><button class="patientbtn">Book ambulance</button></a>
+                                <a href="cover.php#service"><button class="patientbtn">Covid test & vaccine</button></a>
+                                <a href="prescription_list.php"><button class="patientbtn">Download Prescription</button></a>
+                                <a href="zoom_meeting_php/index.php" target="_blank"><button class="patientbtn">Video Call</button></a>
+                                <a href="patient.php"><button class="patientbtn">LOGOUT</button></a>
+                                <br>
+                                <a href=""><img src="Coverimg/clinicareBikash.jpg" class="bikash"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">First Name</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                                echo $_SESSION['first_name'];
+                                             ?>
+                                        </h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">Last Name</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                              echo $_SESSION['last_name'];
+                                            ?>  
+                                       </h4>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">DOB</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                                echo $_SESSION['DOB'];
+                                             ?>
+                                        </h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">Phone</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                              echo $_SESSION['phone'];
+                                            ?>  
+                                       </h4>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">NID/B.C</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                                echo $_SESSION['NID_Birth_certific'];
+                                             ?>
+                                        </h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">Email</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                              echo $_SESSION['email'];
+                                            ?>  
+                                       </h4>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">dos</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                                error_reporting(0);
+                                                echo $_SESSION['Dos'];
+                                             ?>
+                                        </h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">time</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                              echo $_SESSION['timetable'];
+                                            ?>  
+                                       </h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">Ticket no</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                              echo $_SESSION['ticket_id'];
+                                            ?>  
+                                       </h4>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600"> Appointed Doctor</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                                echo $_SESSION['doctor_name'];
+                                             ?>
+                                        </h4>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h3 class="m-b-10 f-w-600">Doctor speciality</h3>
+                                        <h4 class="text-muted f-w-400">
+                                            <?php 
+                                              echo $_SESSION['doctor_speciality'];
+                                            ?>  
+                                       </h4>
+                                    </div>
+                                </div>
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style="margin-top:50px;">payment</h6>
