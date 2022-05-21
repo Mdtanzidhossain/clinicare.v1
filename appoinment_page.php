@@ -143,3 +143,104 @@
 
 
               </form>
+
+
+  <!-- registration backend php  -->
+
+
+                <?php
+
+                  if(isset($_POST['register'])){
+
+                      $DOS            = mysqli_real_escape_string ($db,$_POST['DOS']);
+                      $Time           = mysqli_real_escape_string ($db,$_POST['Time']);
+                      $doctor_name     = mysqli_real_escape_string ($db,$_POST['doctor_name']);
+                   $doctor_speciality  = mysqli_real_escape_string ($db,$_POST['doctor_speciality']);
+
+                      $password        = mysqli_real_escape_string ($db,$_POST['password']);
+                      $confirmpassword = mysqli_real_escape_string ($db,$_POST['confirmpassword']);
+
+                      $filename = $_FILES["uploadfile"] ["name"];
+                      $tempname = $_FILES["uploadfile"] ["tmp_name"];
+                      $folder="documentimg/".$filename;
+                      move_uploaded_file($tempname,$folder);
+
+
+
+
+
+
+                      if($password == $confirmpassword)
+                      {
+
+                        //$hassPass = sha1($password);
+
+                      $regQuery = "INSERT INTO newappoinment (Dos,timetable,uploads,doctor_name,doctor_department) VALUES ('$DOS','$Time','$folder','$doctor_name','$doctor_speciality')";
+                      //$clinicQuery = "INSERT INTO clinic (clinic_id,branch_name) VALUES ('$clinicid','$branch')";
+
+                      $regresult = mysqli_query($db,$regQuery);
+                      //$clinicresult = mysqli_query($db,$clinicQuery);
+
+                          if($regresult)
+                          {
+
+                            header('location: patient_profile.php');
+
+                          } else{
+
+                            die("reg error" .mysqli_error($db));
+                          }
+
+                      }
+
+                      else{
+
+                          echo '<span class="alert alert-danger">password wrong</span>';
+
+                      }
+
+
+                      $loginQuery = "SELECT * FROM newappoinment ";
+                      $loginResult = mysqli_query($db, $loginQuery);
+
+                      while($row = mysqli_fetch_assoc($loginResult))
+                  {
+                 
+                    $_SESSION['Dos']                    = $row['Dos'];
+                    $_SESSION['timetable']              = $row['timetable'];
+                    $_SESSION['ticket_id']              = $row['ticket_id'];
+                    $_SESSION['doctor_name']            = $row['doctor_name'];
+                    $_SESSION['doctor_speciality']      = $row['doctor_department'];
+
+                    
+                  }
+ 
+                  }
+
+                ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
