@@ -46,3 +46,30 @@
 	</section>	<!--  end listing section  -->
 
 
+<footer style="background-color:#054D27 ;">
+
+		<div class="copyrights wrapper">
+			Copyright &copy; <?php echo date("Y")?> All Rights Reserved | Designed by CliniCare Team.
+			<br>Hot line: +8801959608444.
+		</div>
+	</footer><!--  end footer  -->
+
+<!-- whats app chat start-->
+
+    <style>
+      .whatsapp_float{
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+      }
+    </style>
+    <div class="whatsapp_float">
+      
+        <a href="https://wa.me/+8801521581815" target="_blank"><img src="http://localhost/clinicare/Coverimg/whatsapp.png" width="50px" class="whatsapp_float_btn"></a>
+
+    </div>
+
+  <!-- whats app chat end-->
+	
+</body>
+</html>
