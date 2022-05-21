@@ -23,3 +23,26 @@
 		<?php
 			include 'header.php';
 		?>
+
+
+	<section class="listings">
+		<div class="wrapper">
+		<h2 style="text-decoration:underline">Your Booking Status</h2>
+			<ul class="properties_list">
+			<?php
+						
+						include 'includes/config.php';
+						$sel = "SELECT * FROM patient WHERE email = '$_SESSION[email]'";
+						$rs = $conn->query($sel);
+						$rws = $rs->fetch_assoc();
+						error_reporting(0);
+			?>
+				<li>
+						<h2"><span style="font-size:25px; color: #FF0000">Booking Status:</span> <span style="color:#003333; 
+						font-weight: bold; font-size: 25px;"><?php echo $rws['status'];error_reporting(0);?></span></h2>
+				</li>
+			</ul>
+		</div>
+	</section>	<!--  end listing section  -->
+
+
