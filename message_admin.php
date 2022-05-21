@@ -30,3 +30,25 @@
 
 			
 	</section><!--  end hero section  -->
+
+
+	<section class="listings">
+		<div class="wrapper">
+		<h2 style="text-decoration:underline; color:black;" >Message Admin Here for Emergency</h2>
+			<ul class="properties_list">
+			<form method="post">
+				<table>
+					
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea name="message" placeholder="Enter Message Here" class="txt"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="submit" name="send" value="Send Message"></td>
+					</tr>
+				</table>
+			</form>
